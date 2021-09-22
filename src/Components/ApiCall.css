@@ -182,7 +182,7 @@ input {
 /* LAPTOP FORMAT */
 @media (max-width: 1024px) {
   .content-container {
-    width: 35vw;
+    width: 40vw;
   }
 }
 
