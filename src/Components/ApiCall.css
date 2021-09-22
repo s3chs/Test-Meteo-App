@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+/* Reset css values */
+*,
+::before,
+::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Setting the input cursor to pointer since we defined the cursor to default for everything else */
+input {
+  cursor: pointer;
+}
+
+/* global container where everything is stored, width is set to 100vw and min-height to 100vh so that space is correctly used by default  */
+.global-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(
+    118.29deg,
+    #cfc6ff -1.86%,
+    #aa9cf0 55.59%,
+    #dcd7f7 102.19%
+  );
+  padding-bottom: 7vh;
+}
+
+/* Container where ALL our content is stored this will help us with media queries (see end of file) */
+.content-container {
+  width: 30vw;
+}
+
+.title {
+  padding: 7vh 0 1vh;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.app-info {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5887ff;
+  padding-bottom: 5vh;
+}
+
+/* Filter container where we filter with our input type range */
+.search-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-search-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1vh;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(18px);
+  border-radius: 110px;
+}
+
+.search-input {
+  width: 100%;
+}
+/* End of filter container */
+
+/* Weather container where we display our API response */
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 2.5vh 1vw;
+  margin: 2vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-info {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.weather-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.big {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.weather-details {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.weather-stat {
+  padding: 0.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-info {
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #323232;
+  padding-left: 15%;
+}
+
+.white {
+  color: white;
+  padding: 0;
+}
+
+.blue-txt {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #5887ff;
+}
+/* End of weather container */
+
+/* BONUS */
+/* MEDIA QUERIES */
+/* 4K FORMAT */
+@media (max-width: 2560px) {
+  .content-container {
+    width: 25vw;
+  }
+}
+/*  LAPTOP L FORMAT */
+@media (max-width: 1500px) {
+  .content-container {
+    width: 30vw;
+  }
+}
+/* LAPTOP FORMAT */
+@media (max-width: 1024px) {
+  .content-container {
+    width: 40vw;
+  }
+}
+
+/* TABLET FORMAT */
+@media (max-width: 768px) {
+  .content-container {
+    width: 65vw;
+  }
+}
+
+/* PHONE FORMAT */
+@media (max-width: 425px) {
+  .content-container {
+    width: 90vw;
+  }
+}
+
+/* SMALL PHONE FORMAT */
+@media (max-width: 325px) {
+  .content-container {
+    width: 95vw;
+  }
+}
