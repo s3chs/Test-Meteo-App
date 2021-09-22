@@ -29,7 +29,7 @@ export default function ApiCall() {
           const newDate = dateKey.toLocaleDateString("fr-FR", options);
           data.list[i].newDateFormatted = newDate;
         }
-        // SetState of the weather data
+        // SetState of the weather data //
         setWeatherData(data);
       })
       .catch((err) => console.log(err));
@@ -37,7 +37,7 @@ export default function ApiCall() {
     return () => {};
   }, []);
 
-  // Function where we set the input value to our searchWeather state
+  // Function where we set the input value to our searchWeather state //
   const filterTemp = (event) => {
     setSearchWeather(event.target.value);
   };
@@ -66,7 +66,7 @@ export default function ApiCall() {
             />
           </div>
         </div>
-        {/* Mapping the weatherData and applying dynamic filter to it so our data does not disappear once filter is applied and changed */}
+        {/* Mapping the weatherData and applying dynamic filter to it so our data does not disappear once filter is applied/changed */}
         {weatherData &&
           weatherData.list
             .filter((val) => {
@@ -97,7 +97,7 @@ export default function ApiCall() {
                   </div>
                   <div className="weather-stat">
                     <p className="detail-info">chance of rain</p>
-                    <p className="blue-txt">{val.pop}% </p>
+                    <p className="blue-txt">{val.pop * 100}% </p>
                   </div>
                 </div>
               </div>

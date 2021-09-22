@@ -147,7 +147,7 @@ input {
   line-height: 12px;
   text-transform: uppercase;
   color: #323232;
-  padding-left: 15%;
+  padding-left: 20%;
 }
 
 .white {
@@ -182,7 +182,7 @@ input {
 /* LAPTOP FORMAT */
 @media (max-width: 1024px) {
   .content-container {
-    width: 40vw;
+    width: 35vw;
   }
 }
 
